@@ -8,6 +8,7 @@ import {
   Inter_600SemiBold,
   Inter_700Bold
 } from '@expo-google-fonts/inter';
+import { Onboarding } from './src/screens/Login/Onboarding';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,6 +20,7 @@ export default function App() {
   
   return (
     <ThemeProvider>
+      {fontsLoaded && <Onboarding/>}
       <StatusBar style='light'/ >
     </ThemeProvider>
   );
