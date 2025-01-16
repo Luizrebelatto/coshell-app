@@ -16,8 +16,26 @@ const theme = createTheme({
         s: 8,
         m: 16,
         l: 24,
-        xl: 40
+        xl: 42
     },
+
+    textVariants: {
+        defaults: {
+            fontFamily: "Inter_400Regular"
+        },
+        medium: {
+            fontFamily: "Inter_500Medium"
+        },
+        regular: {
+            fontFamily: "Inter_400Regular"
+        },
+        semibold: {
+            fontFamily: "Inter_600SemiBold"
+        },
+        bold: {
+            fontFamily: "Inter_700Bold"
+        }
+    }
 })
 
 const darkTheme = {
