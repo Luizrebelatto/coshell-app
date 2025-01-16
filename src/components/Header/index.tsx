@@ -2,7 +2,6 @@ import React from "react";
 import { createBox, createText } from "@shopify/restyle";
 import { Image, TouchableOpacity } from "react-native";
 import { ThemeProps } from "../../theme";
-import CoshellSVG from "../../assets/svg/coshell_icon.svg"
 
 export function Header() {
     const Box = createBox<ThemeProps>();
@@ -18,11 +17,20 @@ export function Header() {
             flexDirection="row"
             alignItems="center"
         >
-            <TouchableOpacity
-                style={{ width: 80, height: 80, backgroundColor: '#34E0A1', borderRadius: 15 }}
-                
-            >
-
+            <TouchableOpacity>
+                <Box
+                    width={40}
+                    height={40}
+                    bg="lightGreen"
+                    borderRadius={9}
+                    alignItems="center"
+                    justifyContent="center"
+                >
+                    <Image
+                        source={require("../../assets/png/coshell_icon.png")}
+                        resizeMode="cover"
+                    />
+                </Box>
             </TouchableOpacity>
             <Text color="black" fontSize={34} variant="medium" paddingLeft="l">CoShell</Text>
         </Box>
