@@ -13,7 +13,6 @@ export function Header() {
             height={100} 
             bg="white"
             marginTop={"xl"} 
-            paddingHorizontal="m"
             flexDirection="row"
             alignItems="center"
         >

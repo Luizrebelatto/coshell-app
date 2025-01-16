@@ -8,7 +8,8 @@ import {
   Inter_600SemiBold,
   Inter_700Bold
 } from '@expo-google-fonts/inter';
-import { SignInScreen } from './src/screens/Login/SignInScreen';
+// import { SignInScreen } from './src/screens/Login/SignInScreen';
+import { SignUpScreen } from './src/screens/Login/SignUpScreen';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,7 +21,7 @@ export default function App() {
   
   return (
     <ThemeProvider>
-      {fontsLoaded && <SignInScreen/>}
+      {fontsLoaded && <SignUpScreen/>}
       <StatusBar style='light'/ >
     </ThemeProvider>
   );

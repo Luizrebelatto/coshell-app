@@ -9,7 +9,9 @@ const theme = createTheme({
         black: "#000000",
         lightGray: "#F8F8F8",
         darkGray: "#4A4863",
-        white: "#FFFFFF"
+        white: "#FFFFFF",
+        softGray: "#EAEAEA",
+        transparent: 'transparent'
     },
 
     spacing: {
