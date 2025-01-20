@@ -9,7 +9,7 @@ import {
   Inter_700Bold
 } from '@expo-google-fonts/inter';
 // import { SignInScreen } from './src/screens/Login/SignInScreen';
-import { SignUpScreen } from './src/screens/Login/SignUpScreen';
+import { RecoverPassword } from './src/screens/Login/RecoverPassword';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,7 +21,7 @@ export default function App() {
   
   return (
     <ThemeProvider>
-      {fontsLoaded && <SignUpScreen/>}
+      {fontsLoaded && <RecoverPassword/>}
       <StatusBar style='light'/ >
     </ThemeProvider>
   );
