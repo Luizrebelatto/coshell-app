@@ -3,4 +3,6 @@ export type AuthStackParamList = {
     recoverPassword: undefined;
     signInScreen: undefined;
     signUpScreen: undefined;
+    verifyCode: undefined;
+    changePassword: undefined;
 }

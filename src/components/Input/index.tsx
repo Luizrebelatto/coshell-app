@@ -1,11 +1,11 @@
 import React from "react";
 import { createBox, createText } from "@shopify/restyle";
-import { TextInput } from "react-native";
+import { TextInput, KeyboardType } from "react-native";
 import { ThemeProps } from "../../theme";
 
 interface IInput {
     placeholder: string;
-    keyboardType: "email-address" | "default";
+    keyboardType: KeyboardType;
     value: string;
     setValue: (value: string) => void;
 }

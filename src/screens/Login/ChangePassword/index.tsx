@@ -6,11 +6,12 @@ import { Input } from "../../../components/Input";
 import { Button } from "../../../components/Button";
 import { TouchableOpacity, KeyboardAvoidingView, Platform } from "react-native";
 
-export function RecoverPassword() {
+export function ChangePassword() {
     const Box = createBox<ThemeProps>();
     const Text = createText<ThemeProps>();
 
-    const [email, setEmail] = useState<string>(null);
+    const [password, setPassword] = useState<string>(null);
+    const [confirmPassword, setConfirmPassword] = useState<string>(null);
 
     return (
         <KeyboardAvoidingView
@@ -21,26 +22,22 @@ export function RecoverPassword() {
                 <Box>
                     <Header/>
                     <Box>
-                        <Text variant="medium" fontSize={20} color="black">RECOVER PASSWORD</Text>
+                        <Text variant="medium" fontSize={20} color="black">CHANGE PASSWORD</Text>
                         <Text variant="regular" fontSize={14} color="darkGray" lineHeight={18} marginTop="s">
-                        Forgot your password? Don’t worry, enter your email to reset your current password.
+                        Create a new, strong password that you don’t use before
                         </Text>
-                        <Box justifyContent="space-between" marginTop="l">
-                            <Input keyboardType="email-address" placeholder="Email" value={email} setValue={setEmail}/>
+                        <Box marginTop="l" height={120} justifyContent="space-between">
+                            <Input keyboardType="default" placeholder="Create Password" value={password} setValue={setPassword}/>
+                            <Input keyboardType="default" placeholder="Confirm Password" value={confirmPassword} setValue={setConfirmPassword}/>
                         </Box>
+                        <Box flexDirection="row" alignItems="center" justifyContent="flex-start" marginTop="m">
+                        <Text variant="medium" fontSize={12} color="darkBlue">At least 8 characters</Text>
+                    </Box>
                     </Box>
                 </Box>
                 
                 <Box marginTop="l" marginBottom="xl">
-                    <Button title="SUBMIT" onPress={() => console.log('press')} bg="lightGreen"/>
-                    <Box flexDirection="row" alignItems="center" justifyContent="center" marginTop="xl">
-                        <Text variant="medium" fontSize={14} color="black">DON’T HAVE AN ACCOUNT?</Text>
-                        <TouchableOpacity>
-                            <Text variant="regular" fontSize={14} color="lightGreen" lineHeight={18} marginLeft="s">
-                            SIGN UP
-                            </Text>
-                        </TouchableOpacity>
-                    </Box>
+                    <Button title="CHANGE PASSWORD" onPress={() => console.log('press')} bg="lightGreen"/>
                 </Box>
             </Box>
         </KeyboardAvoidingView>
