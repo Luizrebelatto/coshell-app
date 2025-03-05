@@ -14,7 +14,7 @@ export default function AuthRoutes(){
         <Stack.Navigator 
             screenOptions={{ headerShown: false, gestureEnabled: false }}
             id={null} 
-            initialRouteName="changePassword"
+            initialRouteName="onboarding"
         >
             <Stack.Screen name="onboarding" component={Onboarding}/>
             <Stack.Screen name="recoverPassword" component={RecoverPassword}/>

@@ -12,7 +12,6 @@ interface IInput {
 
 export function Input(data: IInput) {
     const Box = createBox<ThemeProps>();
-    const Text = createText<ThemeProps>();
 
     return (
         <Box 
@@ -28,7 +27,7 @@ export function Input(data: IInput) {
                 style={{ height: 30, width: "100%", paddingHorizontal: 16 }}
                 keyboardType={data.keyboardType}
                 value={data.value}
-                onChangeText={(value: string) => data.setValue(value)}
+                onChangeText={data.setValue}
             />
         </Box>
     )
